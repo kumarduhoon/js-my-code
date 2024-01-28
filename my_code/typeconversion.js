@@ -15,6 +15,12 @@ let isLoggedIn = "" // "" => false and "akash" => true
 
 let booleanIsLoggedIn = Boolean(isLoggedIn)
 
-console.log(typeof (booleanIsLoggedIn))
-console.log(booleanIsLoggedIn);
+// console.log(typeof (booleanIsLoggedIn))
+// console.log(booleanIsLoggedIn);
 
+
+console.log(+true);
+console.log(-8 + "8"); // string -88
+console.log(typeof (-8 + "8"));
+console.log("8" - 8); // number 0
+console.log(typeof ("8" - 8));
