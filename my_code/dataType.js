@@ -13,4 +13,7 @@
 
 // No primitive or Object in javacript 
 
-Object
+// Object
+
+console.log(typeof undefined) //undefined
+console.log(typeof null) //object
