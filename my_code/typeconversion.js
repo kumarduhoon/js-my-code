@@ -19,8 +19,24 @@ let booleanIsLoggedIn = Boolean(isLoggedIn)
 // console.log(booleanIsLoggedIn);
 
 
-console.log(+true);
-console.log(-8 + "8"); // string -88
-console.log(typeof (-8 + "8"));
-console.log("8" - 8); // number 0
-console.log(typeof ("8" - 8));
+// console.log(+true);
+// console.log(-8 + "8"); // string -88
+// console.log(typeof (-8 + "8"));
+// console.log("8" - 8); // number 0
+// console.log(typeof ("8" - 8));
+
+
+console.log("2" > 1); //true because here only value is checked by javacript 
+
+console.log(null > 0) //false beacuse null convert some time into 0 or some time into NaN
+console.log(null == 0)//false beacuse null convert some time into 0 or some time into NaN
+console.log(null >= 0) //true beacuse null convert some time into 0 or some time into NaN
+
+console.log(undefined > 0)  //false
+console.log(undefined > 0)//false
+console.log(undefined > 0) //false
+
+//  always used the strictly type check which is check the data type and value both
+
+console.log(undefined === 0)
+console.log("0" === 0)
