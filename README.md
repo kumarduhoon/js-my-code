@@ -1,2 +1,2 @@
-# js-my-hindi-code
+# js-my-code
 my Js code
