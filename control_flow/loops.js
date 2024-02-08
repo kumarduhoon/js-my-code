@@ -17,8 +17,26 @@ for (let i = 0; i < 10; i++) {
 
 for (let i = 0; i < 10; i++) {
     if (i == 4) {
-        console.log("skip")
+        // console.log("skip")
         continue;
     }
-    console.log(i)
+    // console.log(i)
 }
+
+// while loop
+
+let index = 11;
+
+while (index <= 10) {
+    // console.log(index);
+    index = index + 1;
+}
+
+
+// do while loop
+
+do {
+    console.log(index);
+    index++
+} while (index <= 10)
+
