@@ -50,6 +50,7 @@ for (const key in arr) {
 
 //  for Each loop :- it is a high order function
 // “higher-order function” is a function that accepts functions as parameters and/or returns a function.
+//  for Each loop nothing give as return value
 
 let myArr = ["ka", "ak", "ls", "op", "gh"];
 
@@ -62,3 +63,30 @@ function myfun(item) { console.log(item) }
 // array.forEach((item, index, array) => {
 
 // });
+
+
+
+//  map is also a higher order function
+
+const myarr = [2, 3, 4, 5, 6, 7, 6, 8]
+
+const result = myarr.map(function (item) {
+    return item + 2
+})
+// console.log(result)
+
+// filter is also a higher order function, which is used to filter the value from array and get a return value in a new array
+
+const result2 = myarr.filter(function (item) {
+    return item > 4
+})
+
+// console.log(result2)
+
+// reduce is also a higer order function which is used a single value result from a array 
+
+const result3 = myarr.reduce(function (acc, crtVal) {
+    return acc + crtVal
+}, 0)
+console.log(result3)
+
