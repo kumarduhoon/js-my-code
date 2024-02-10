@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+
+<body>
+    <ul class="lang">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName) {
+        const ul = document.querySelector(".lang");
+        const li = document.createElement("li");
+        const add_text = document.createTextNode(langName);
+        li.appendChild(add_text)
+        ul.appendChild(li)
+    }
+    addLang("python")
+    addLang("Java")
+
+
+    // EDIT 
+    function edit(landName, n) {
+        const sndLang = document.querySelector(`li:nth-child(${n})`);
+        const newli = document.createElement("li");
+        const add_text = document.createTextNode(landName);
+        newli.appendChild(add_text);
+        sndLang.replaceWith(newli)
+    }
+    edit("Ruby", 2)
+    edit("Golang", 3)
+    // 2nd way 
+    // const sndLang = document.querySelector(`li:nth-child(2)`);
+    // sndLang.outerHTML = "<li>kuch nhi</li>"
+
+    // remove
+
+    function myRemove(n) {
+        const removeChild = document.querySelector(`li:nth-child(${n})`);
+        removeChild.remove();
+    }
+    myRemove(2)
+</script>
+
+</html>
