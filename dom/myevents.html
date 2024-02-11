@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListner</title>
+</head>
+
+<body>
+    <div>
+        <ul id="images">
+            <li>
+                <img width="200px"
+                    src="https://images.unsplash.com/photo-1707638121258-eb6241971802?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8"
+                    alt="photoshop" id="photoshop">
+            </li>
+            <li>
+                <img width="200px"
+                    src="https://images.pexels.com/photos/6908252/pexels-photo-6908252.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="" id="japan" />
+            </li>
+            <li>
+                <img width="200px"
+                    src="https://images.pexels.com/photos/19927917/pexels-photo-19927917/free-photo-of-police-car-near-radio-city-music-hall-in-new-york.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="" id="river" />
+            </li>
+            <li>
+                <img width="200px"
+                    src="https://images.unsplash.com/photo-1707033081487-d5f5e3e5651c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="" id="owl" />
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    // type, timestamp,preventDefault, target, toElement, srcElement,clinetY,clientx.screenX, screenY, altkey.ctrlkey,keycode
+
+    // propagation :it defind as when event run or execute in given order ony by one this is called event propagation
+    //   when we give the third argument false in addEventListner then it behave like a event bubbling
+    // event bubbling : when event run from child to parnet dom
+    // when we give the third argument true in addEventListner it is called event capturing
+    //  event capturing run from parnet to child dom
+    // for stop this propagation, we used the stop.propagation() method
+
+
+    // document.getElementById("images").addEventListener("click", function (e) {
+    //     console.log("clicked on the UL")
+    // }, false)
+
+    // document.getElementById("owl").addEventListener("click", function (e) {
+    //     e.stopPropagation()
+    //     console.log("clicked on the owl")
+    // }, false)
+
+    document.getElementById("images").addEventListener("click", function (e) {
+        if (e.target.tagName === "IMG") {
+            const removeItem = e.target.parentNode;
+            removeItem.remove()
+        }
+        // removeItem.parentNode.removeChild(removeItem)
+    }, false)
+
+</script>
+
+</html>
