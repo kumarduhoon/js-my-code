@@ -42,5 +42,49 @@
   open(method, url, async, user)
   open(method, url, async, user, password)
 ```
+## How to send any post request in XMLHttpRequest
+
+```javascript
+// Create a new instance of XMLHttpRequest
+var xhr = new XMLHttpRequest();
+
+// Specify the request method as "POST" and the URL to which you want to send the request
+var url = "https://example.com/api/endpoint";
+xhr.open("POST", url, true);
+// Set the appropriate headers
+xhr.setRequestHeader("Content-Type", "application/json");
+
+// Convert your data into JSON format
+var data = {
+    key1: "value1",
+    key2: "value2"
+};
+var jsonData = JSON.stringify(data);
+
+// Define a function to handle the response
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+            // Request was successful, handle response here
+            console.log(xhr.responseText);
+        } else {
+            // Handle error
+            console.error('Request failed:', xhr.status);
+        }
+    }
+};
+
+// Send the request with the data
+xhr.send(jsonData);
+
+
+
+
+
+```
+
+
+
+
  ## Note
 #### The above info is not a fully info about the all methods of the xmlHttpRequest if you want to study deeply about this then [click here ](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)

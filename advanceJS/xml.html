@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest</title>
+</head>
+
+<body>
+    <h1>HTTP Request</h1>
+</body>
+<script>
+    const myurl = "https://api.github.com/users/kumarduhoon"
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", myurl, true)
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(data.id)
+        }
+    }
+    xhr.send()
+</script>
+
+</html>
