@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Interval</title>
+</head>
+
+<body>
+    <div>Time Interval</div>
+    <button id="start">strat</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const strat = document.querySelector("#start");
+    const mystop = document.querySelector("#stop");
+    let interTime;
+
+    strat.addEventListener("click", function () {
+        if (!interTime) {
+            let a = 1
+            interTime = setInterval(function () {
+                console.log(a++ + " Akash")
+            }, 1000)
+        }
+
+    })
+    mystop.addEventListener("click", function () {
+        clearInterval(interTime)
+        interTime = null
+    })
+
+</script>
+
+</html>

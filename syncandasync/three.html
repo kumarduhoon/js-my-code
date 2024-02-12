@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Interval</title>
+</head>
+
+<body>
+    <div>Time Interval</div>
+    <button id="start">strat</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const hex = "0123456789ABCDEF";
+    function randomColor() {
+        let myColor = "#"
+        for (let i = 0; i < 6; i++) {
+            myColor = myColor + hex[Math.floor(Math.random() * 16)];
+        }
+        return myColor;
+    }
+    const strat = document.querySelector("#start");
+    const mystop = document.querySelector("#stop");
+    let interTime;
+
+    let mystart = function () {
+        if (!interTime) {
+            interTime = setInterval(function () {
+                document.body.style.backgroundColor = randomColor()
+            }, 1000)
+        }
+    }
+    let myStop = function () {
+        clearInterval(interTime);
+        interTime = null;
+    }
+    strat.addEventListener("click", mystart, false)
+    mystop.addEventListener("click", myStop, false)
+
+</script>
+
+</html>
